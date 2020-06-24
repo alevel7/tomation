@@ -1,0 +1,12 @@
+@tailwind base;
+
+@tailwind components;
+
+
+.bg-lighter-brand-blue {
+    background-color: rgb(35, 118, 212);
+}
+
+@tailwind utilities;
+
+

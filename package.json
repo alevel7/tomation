@@ -1,0 +1,16 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "tailwindcss": "^1.4.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build:css": "tailwind build src/style.css -o dist/style.css",
+    "watch": "tailwind build src/style.css -o dist/style.css --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}
