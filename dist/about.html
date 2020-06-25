@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <title>Work Place Metrics</title>
+</head>
+
+<body>
+  <header class="sm:flex sm:px-4 sm:py-3 sm:items-center fixed w-full z-50 shadow-lg bg-white">
+    <div class="flex items-center justify-between px-4 py-3 sm:p-0">
+      <div>
+        <img src="images/WPS_New_logo_Big_Darkset.png" alt="" class="h-12">
+      </div>
+      <div class="sm:hidden">
+        <button type="button" class="text-brand-blue focus:text-blue-500 focus:outline-none">
+          <i class=" fa fa-bars fa-4" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+    <div class="flex-1 ml-3 bg-white">
+      <ul class="md:flex md:block hidden justify-around">
+        <li
+          class="sm:w-full hover:bg-brand-blue hover:text-white p-4 text-center text-brand-blue font-bold text-lg rounded-t-lg">
+          <a href="index.html">Home</a></li>
+        <li
+          class="sm:w-full hover:bg-brand-blue hover:text-white p-4 text-center text-brand-blue font-bold text-lgrounded-t-lg">
+          <a href="articles.html">Insights $ Articles</a></li>
+        <li
+          class="sm:w-full hover:bg-brand-blue hover:text-white p-4 text-center text-brand-blue font-bold text-lgrounded-t-lg">
+         <a href="pricing.html">Plan & Pricing</a></li>
+        <li
+          class="relative sm:w-full hover:bg-brand-blue hover:text-white pt-4 text-center text-brand-blue font-bold text-lg dropdown rounded-t-lg">
+          <span class="relative">solutions</span>
+          <ul class="md:absolute bg-brand-blue text-white w-full text-sm hidden">
+            <li class="border-b-4 border-white p-2 hover:bg-white hover:text-blue-900">Metric Suite Corporate
+              Performance Management Software</li>
+            <li class="border-b-4 border-white p-2 hover:bg-white hover:text-blue-900">Metric Suite Human Performance
+              Management Software</li>
+            <li class="border-b-4 border-white p-2 hover:bg-white hover:text-blue-900">Metric Suite Employee Records
+            </li>
+            <li class="border-b-2 border-white p-2 hover:bg-white hover:text-blue-900">Metric Suite Payroll</li>
+            <li class="border-b-2 border-white p-2 hover:bg-white hover:text-blue-900">Performance Management System
+              Development</li>
+            <li class="border-b-2 border-white p-2 hover:bg-white hover:text-blue-900">Org360-Pulse</li>
+            <li class="border-b-2 border-white p-2 hover:bg-white hover:text-blue-900">Org360-Standard</li>
+            <li class="border-b-2 border-white p-2 hover:bg-white hover:text-blue-900">Org360-Tailored</li>
+            <li class="border-b-2 border-white p-2 hover:bg-white hover:text-blue-900">Hr Metric Solution</li>
+            <li class="border-b-2 border-white p-2 hover:bg-white hover:text-blue-900">KPI Analytics</li>
+          </ul>
+        </li>
+        <li
+          class="sm:w-full hover:bg-brand-blue hover:text-white p-4 text-center text-brand-blue font-bold text-lgrounded-t-lg">
+          <a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </header>
+  
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src='js/script.js'></script>
+  <script>
+    $('document').ready(function () {
+      $('span.dropdown').click(function () {
+        $('div.dropdown-menu').toggleClass('hidden')
+      })
+    })
+  </script>
+</body>
+
+</html>
