@@ -28,4 +28,11 @@ $(document).ready(function () {
        substate = false;
     }
   })
+
+  $('span.dropdown').click(function () {
+    $('div.dropdown-menu').toggleClass('hidden')
+  })
+  $('.about li').click(function(){
+    $(this).children('p').slideToggle()
+  })
 })
