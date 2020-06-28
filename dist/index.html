@@ -7,13 +7,54 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <title>Work Place Metrics</title>
+  <style>
+    .slider {
+      overflow: hidden;
+    }
+
+    .slider section {
+      position: relative;
+      width: 500%;
+      margin: 0;
+      left: 0;
+      display: flex;
+      animation: sliding 20s infinite;
+    }
+
+    .slider section .slide {
+      width: 20%;
+    }
+
+    @keyframes sliding {
+      0% {
+        left: 0;
+      }
+
+      20% {
+        left: 0;
+      }
+
+      25% {
+        left: -100%;
+      }
+
+      45% {
+        left: -100%;
+      }
+
+      100% {
+        left: 0%;
+      }
+
+    }
+  </style>
 </head>
 
 <body>
-  <header class="sm:flex sm:px-4 sm:py-3 sm:items-center fixed w-full z-50 shadow-lg bg-white">
+  <header class="md:flex md:px-4 md:py-3 sm:items-center fixed w-full z-50 shadow-lg bg-white justify-between">
     <div class="flex items-center justify-between px-4 py-3 sm:p-0">
       <div>
-        <img src="images/WPS_New_logo_Big_Darkset.png" alt="" class="h-12">
+        <img src="images/WPS_New_logo_Big_Darkset.png" alt="" class="h-16">
       </div>
       <div class="sm:hidden">
         <button type="button" class="text-brand-blue focus:text-blue-500 focus:outline-none">
@@ -21,32 +62,25 @@
         </button>
       </div>
     </div>
-    <div class="flex-1 ml-3 bg-white">
-      <ul class="md:flex md:block hidden justify-around">
+    <div class="ml-3 bg-white md:w-2/3">
+      <ul class="md:flex md:block hidden md:justify-around margin-auto">
         <li
-          class="sm:w-full hover:bg-brand-blue hover:text-white p-4 text-center text-brand-blue font-bold text-lg rounded-t-lg">
+          class="sm:w-1/3 hover:bg-brand-blue hover:text-white p-2 text-center text-brand-blue font-semibold text-lg rounded-t-lg">
           <a href="index.html">Home</a></li>
         <li
-          class="sm:w-full hover:bg-brand-blue hover:text-white p-4 text-center text-brand-blue font-bold text-lg rounded-t-lg">
-          <a href="articles.html">Insights & Articles</a></li>
+          class="sm:w-1/2 hover:bg-brand-blue hover:text-white p-2 text-center text-brand-blue font-semibold text-lg rounded-t-lg">
+          <a href="articles.html">Insights & Research</a></li>
         <li
-          class="sm:w-full hover:bg-brand-blue hover:text-white p-4 text-center text-brand-blue font-bold text-lg rounded-t-lg">
+          class="sm:w-1/2 hover:bg-brand-blue hover:text-white p-2 text-center text-brand-blue font-semibold text-lg rounded-t-lg">
           <a href="pricing.html">Plan & Pricing</a></li>
         <li
-          class="relative sm:w-full hover:bg-brand-blue hover:text-white pt-4 text-center text-brand-blue font-bold text-lg dropdown rounded-t-lg">
-          <span class="relative">solutions</span>
-          <ul class="md:absolute bg-brand-blue text-white w-full text-sm hidden">
+          class="relative sm:w-2/4 hover:bg-brand-blue hover:text-white pt-2 text-center text-brand-blue font-semibold text-lg dropdown rounded-t-lg">
+          <span class="relative">Solutions</span>
+          <ul class="md:absolute bg-blue-500 text-white w-full text-sm hidden bg-opacity-50">
             <li class="border-b-4 border-white p-2 hover:bg-white hover:text-blue-900">
-              <a href="mscpms.html">Metric Suite Corporate
-                Performance Management Software</a>
+              <a href="mscpms.html">Metrics-Suite Solution</a>
             </li>
-            <li class="border-b-4 border-white p-2 hover:bg-white hover:text-blue-900">
-              <a href="mshpms.html">Metric Suite Human Performance
-                Management Software</a>
-            </li>
-            <li class="border-b-4 border-white p-2 hover:bg-white hover:text-blue-900">Metric Suite Employee Records
-            </li>
-            <li class="border-b-2 border-white p-2 hover:bg-white hover:text-blue-900">Metric Suite Payroll</li>
+
             <li class="border-b-2 border-white p-2 hover:bg-white hover:text-blue-900">
               <a href="pmsd.html">Performance Management System
                 Development</a>
@@ -61,30 +95,60 @@
           </ul>
         </li>
         <li
-          class="sm:w-full hover:bg-brand-blue hover:text-white p-4 text-center text-brand-blue font-bold text-lg rounded-t-lg">
+          class="sm:w-1/3 hover:bg-brand-blue hover:text-white p-2 text-center text-brand-blue font-semibold text-lg rounded-t-lg">
           <a href="about.html">About</a></li>
       </ul>
     </div>
   </header>
-  <div class="pt-5 lg:pt-20 md:pt-24"
-    style=" background-image: url('https://images.unsplash.com/photo-1543286386-2e659306cd6c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'); background-size: cover; background-attachment: fixed; height:80vh"
-    id="home">
-    <div class="flex flex-col items-center justify-around mt-20 sm:ml-4 sm:mr-4 md:mt-24">
-      <h2 class="lg:text-4xl sm:text-3xl text-center text-white font-bold text-3xl">Monitor and manage performance
-        across all tiers as you
-        link daily
-        operational activities of the workforce with corporate strategic goals and objectives of the organization on the
-        go. </h2>
-      <a href="#"
-        class="mt-3 border-4 p-5 rounded-md text-white hover:text-gray-100 hover:bg-brand-blue font-semibold">Learn
-        More</a>
-    </div>
+  <div class="pt-5 lg:pt-18 md:pt-20 slider">
+    <section>
+      <div class="slide"
+        style=" background-image: url('https://images.unsplash.com/photo-1543286386-2e659306cd6c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'); background-size: cover; height:80vh"
+        id="home">
+        <div class="flex flex-col items-center justify-around mt-20 sm:ml-4 sm:mr-4 md:mt-24">
+          <h2 class="lg:text-4xl sm:text-3xl text-center text-white font-bold text-3xl">
+            We Offer automated corporate and human resources performance management solutions
+          </h2>
+          <a href="mscpms.html"
+            class="mt-3 border-4 p-5 rounded-md text-white hover:text-gray-100 hover:bg-brand-blue font-semibold">Learn
+            More</a>
+        </div>
+      </div>
+      <div class="slide"
+        style=" background-image: url('https://images.unsplash.com/photo-1499914485622-a88fac536970?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'); background-size: cover; height:80vh"
+        id="home">
+        <div class="flex flex-col items-center justify-around mt-20 sm:ml-4 sm:mr-4 md:mt-24">
+          <h2 class="lg:text-4xl sm:text-3xl text-center text-white font-bold text-3xl">Monitor and manage performance
+            across all tiers as you
+            link daily
+            operational activities of the workforce with corporate strategic goals and objectives of the organization on
+            the
+            go. </h2>
+          <a href="mscpms.html"
+            class="mt-3 border-4 p-5 rounded-md text-white hover:text-gray-100 hover:bg-brand-blue font-semibold">Learn
+            More</a>
+        </div>
+      </div>
+      <div class="slide"
+        style=" background-image: url('https://images.unsplash.com/photo-1543286386-2e659306cd6c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'); background-size: cover; height:80vh"
+        id="home">
+        <div class="flex flex-col items-center justify-around mt-20 sm:ml-4 sm:mr-4 md:mt-24">
+          <h2 class="lg:text-4xl sm:text-3xl text-center text-white font-bold text-3xl">
+            We Offer automated corporate and human resources performance management solutions
+          </h2>
+          <a href="mscpms.html"
+            class="mt-3 border-4 p-5 rounded-md text-white hover:text-gray-100 hover:bg-brand-blue font-semibold">Learn
+            More</a>
+        </div>
+      </div>
+    </section>
   </div>
 
   <div class="bg-brand-blue p-5 text-white lg:flex justify-around">
     <div>
       <h1 class="text-gray-500 lg:text-4xl">Metric Suite </h1>
-      <span class="lg:text-3xl text-justify">Seamlessly generate both quantitative and qualitative data required for effective performance and appraisal
+      <span class="lg:text-3xl text-justify">Seamlessly generate both quantitative and qualitative data required for
+        effective performance and appraisal
         management within your organization</span>
     </div>
     <br class="lg:hidden">
@@ -92,7 +156,7 @@
       <h1 class="text-gray-500 lg:text-4xl">Org 360 Suite </h1>
       <span class="lg:text-3xl text-justify">
         We provide workplace surveys, reporting and analysis to transform employee feedback into meaningful action plans
-      that promote caring service.
+        that promote caring service.
       </span>
     </div>
   </div>
@@ -111,40 +175,11 @@
         </div>
       </div>
       <div class="max-w-sm rounded overflow-hidden shadow-lg text-center mt-3 p-5">
-        <img class="w-24 mx-auto mt-3" src="images/measurable-improvement-116.png" alt="Sunset in the mountains">
-        <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">Seamless</div>
-          <p class="text-gray-700 text-base sm:text-2xl">
-            Seamless on the job collaboration amongst team members
-          </p>
-        </div>
-
-      </div>
-      <div class="max-w-sm rounded overflow-hidden shadow-lg text-center mt-3 p-5">
-        <img class="w-24 mx-auto mt-3" src="images/task_management.jpg" alt="Sunset in the mountains">
-        <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">Task Management</div>
-          <p class="text-gray-700 text-base sm:text-2xl">
-            Extract performance appraisal data from task management
-          </p>
-        </div>
-
-      </div>
-      <div class="max-w-sm rounded overflow-hidden shadow-lg text-center mt-3 p-5">
         <img class="w-24 mx-auto mt-3" src="images/3039491.svg" alt="Sunset in the mountains">
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">Rating</div>
           <p class="text-gray-700 text-base sm:text-2xl">
             Access on-the go individual, departmental and corporate performance rating
-          </p>
-        </div>
-      </div>
-      <div class="max-w-sm rounded overflow-hidden shadow-lg text-center mt-3 p-5">
-        <img class="w-24 mx-auto mt-3" src="images/collaboration.svg" alt="Sunset in the mountains">
-        <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">Collaboration</div>
-          <p class="text-gray-700 text-base sm:text-2xl">
-            Work with your team from any location in the world.
           </p>
         </div>
       </div>
@@ -213,7 +248,7 @@
       </div>
       <div class="container px-5 py-24 mx-auto flex">
         <div
-          class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10">
+          class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 bg-opacity-25">
           <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Want to join us?</h2>
           <p class="leading-relaxed mb-5 text-gray-900">Join our Global partnership network today</p>
           <input
@@ -328,70 +363,75 @@
     </section>
   </div>
   <footer class="bg-blue-700 text-white font-semibold">
-    <div class="lg:flex justify-around p-8">
-      <div class="flex">
+    <div class="lg:flex justify-around p-6">
+        <div class="flex">
+            <div>
+                <h2 class="text-blue-400 text-2xl">Contact</h2>
+                <p class="leading-5">205 Corey Place<br>
+                    Huntington Manor
+                    NY 11746 USA</p><br>
+                <p class="leading-5">5 Adeboye Solanke Avenue,<br>Off Allen Avenue <br> Ikeja, Lagos, Nigeria</p>
+                <h3 class="text-blue-400 text-lg">Tel</h3>
+                <p>V: +1 888-402-0088, 
+                    C: +1 516-312-1400</p>
+                <p>V: +234 705 333 5000, 
+                    C: +234 803 338 8560</p>
+            </div>
+            <img src="images/footer.png" alt="" class="h-20">
+        </div>
+        <br class="lg:hidden">
         <div>
-          <h2 class="text-blue-400 text-2xl">Contact</h2>
-          <p class="leading-10">205 Corey Place<br>
-            Huntington Manor
-            NY 11746 USA</p>
-            <h3 class="text-blue-400 text-lg">Tel</h3>
-            <p>V: +1 888-402-0088<br>
-              C: +1 516-312-1400</p>
+            <h2 class="text-blue-400 text-2xl">Quick Links</h2>
+            <ul class="list-disc leading-8">
+                <li><a href="about.html">About</a></li>
+                <li>Contact</li>
+                <li>FAQS</li>
+                <li>How it Works</li>
+                <li>Our Services</li>
+                <li>Request a Demo</li>
+            </ul>
         </div>
-        <img src="images/footer.png" alt="" class="h-20">
-      </div>
-      <br class="lg:hidden">
-      <div>
-        <h2 class="text-blue-400 text-2xl">Quick Links</h2>
-        <ul class="list-disc leading-10">
-          <li><a href="about.html">About</a></li>
-          <li>Contact</li>
-          <li>FAQS</li>
-          <li>How it Works</li>
-          <li>Our Services</li>
-          <li>Request a Demo</li>
-        </ul>
-      </div>
-      <br class="lg:hidden">
-      <div>
-        <h2 class="text-blue-400 text-2xl"> Find Out More</h2>
-        <ul class="list-disc leading-10">
-          <li>Become a Provider</li>
-          <li>Free Pulse</li>
-          <li>sitemap</li>
-          <li>Solutions</li>
-          <li>Testimonials</li>
-        </ul>
-      </div>
-      <br class="lg:hidden">
-      <div>
-        <h2 class="text-blue-400 text-2xl">Social Connect</h2>
-        <div class="social-link">
-          <img src="images/facebook.png" alt="facebook" class="w-8 inline">
-          <img src="images/linkedin.png" alt="linkedIn" class="w-8 inline">
-          <img src="images/googlePlus.png" alt="googleplus" class="w-8 inline">
-          <img src="images/twitter.png" alt="twitter" class="w-8 inline">
+        <br class="lg:hidden">
+        <div>
+            <h2 class="text-blue-400 text-2xl"> Find Out More</h2>
+            <ul class="list-disc leading-8">
+                <li>Become a Provider</li>
+                <li>Free Pulse</li>
+                <li>sitemap</li>
+                <li>Solutions</li>
+                <li>Testimonials</li>
+            </ul>
         </div>
-        <h3 class="text-blue-400 mt-16">Fill in your Email</h3>
-        <h5>We'll keep you posted</h5>
-        <input type="email" name="email" id="email" placeholder="Email Address" class="p-3 h-10 outline-none bg-gray-300 text-gray-600 mt-2 w-full"><br>
-        <button class="text-blue-400 border border-blue-400 px-4 py-2 mt-2 font-bold rounded hover:bg-gray-300">Send</button>
-      </div>
+        <br class="lg:hidden">
+        <div>
+            <h2 class="text-blue-400 text-2xl">Social Connect</h2>
+            <div class="social-link">
+                <img src="images/facebook.png" alt="facebook" class="w-8 inline">
+                <img src="images/linkedin.png" alt="linkedIn" class="w-8 inline">
+                <img src="images/googlePlus.png" alt="googleplus" class="w-8 inline">
+                <img src="images/twitter.png" alt="twitter" class="w-8 inline">
+            </div>
+            <h3 class="text-blue-400 mt-16">Fill in your Email</h3>
+            <h5>We'll keep you posted</h5>
+            <input type="email" name="email" id="email" placeholder="Email Address"
+                class="p-3 h-10 outline-none bg-gray-300 text-gray-600 mt-2 w-full"><br>
+            <button
+                class="text-blue-400 border border-blue-400 px-4 py-2 mt-2 font-bold rounded hover:bg-gray-300">Send</button>
+        </div>
     </div>
     <div class="text-center p-4 bg-blue-500 text-white">
-      © Copyright 2009 - 2020 | Workplace Stars | All Rights Reserved | Terms | Privacy
+        © Copyright 2009 - 2020 | Workplace Stars | All Rights Reserved | Terms | Privacy
     </div>
-  </footer>
+</footer>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src='js/script.js'></script>
   <script>
-    $('document').ready(function () {
-      $('span.dropdown').click(function () {
-        $('div.dropdown-menu').toggleClass('hidden')
-      })
-    })
+    //$('document').ready(function () {
+     // $('span.dropdown').click(function () {
+      //  $('div.dropdown-menu').toggleClass('hidden')
+      //})
+    //})
   </script>
 </body>
 
